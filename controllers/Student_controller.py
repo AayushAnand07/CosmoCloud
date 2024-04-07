@@ -4,6 +4,7 @@ from fastapi import APIRouter, HTTPException
 from pymongo import MongoClient
 from bson import ObjectId
 from models.Student_model import Address, Student
+load_dotenv()
 
 mongodb_uri = os.getenv("MONGODB_URI")
 client = MongoClient(mongodb_uri)
