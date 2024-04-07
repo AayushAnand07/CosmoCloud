@@ -5,8 +5,8 @@ from pymongo import MongoClient
 from bson import ObjectId
 from models.Student_model import Address, Student
 
-
-client = MongoClient("mongodb+srv://aayush:aayush@cluster0.g1g5txs.mongodb.net/")
+mongodb_uri = os.getenv("MONGODB_URI")
+client = MongoClient(mongodb_uri)
 db = client["Library"]
 collection = db["Students"]
 
