@@ -4,7 +4,7 @@ from controllers.Student_controller import router as student_router
 app = FastAPI()
 
 
-app.include_router(student_router)
+app.include_router(student_router, prefix='/api')
 
 
 if __name__ == "__main__":
